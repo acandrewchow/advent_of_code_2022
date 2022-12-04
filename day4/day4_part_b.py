@@ -12,9 +12,7 @@ for x in data:
     a1, a2 = a.split("-")
     b1, b2 = b.split("-")
 
-    if int(a1) <= int(b2) and int(a2) >= int(b1):
-        overlap_count += 1
-    elif int(b1) <= int(a2) and int(b2) >= int(a1):
+    if not (int(a2) < int(b1) or int(a1) > int(b2)):
         overlap_count += 1
 
 print("Part 2:", overlap_count)
